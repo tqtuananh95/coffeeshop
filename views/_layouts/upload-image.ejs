@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Upload Page</title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+    <style>
+        div.preview-images>img {
+            width: 20%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 mt-3">
+                <h4>Node.js upload & resize multiple Images</h4>
+                <h6 id="alertMsg"><%=(typeof alertMsg!='undefined')? alertMsg:''%></h6>
+                <form class="mt-4" action="/upload/store-image" method="POST" enctype="multipart/form-data">
+                    <input type="file" name="images" multiple id="input-images" class="form-control-file border" />
+                    <button type="submit" class="btn btn-primary mt-2">Submit</button>
+                </form>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="preview-images"></div>
+            </div>
+        </div>
+    </div>
+    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/jquery/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            let imagesPreview = function (input, placeToInsertImagePreview) {
+                if (input.files) {
+                    let filesAmount = input.files.length;
+                    for (i = 0; i < filesAmount; i++) {
+                        let reader = new FileReader();
+                        reader.onload = function (event) {
+                            $($.parseHTML("<img>"))
+                                .attr("src", event.target.result)
+                                .appendTo(placeToInsertImagePreview);
+                        };
+                        reader.readAsDataURL(input.files[i]);
+                    }
+                }
+            };
+            $("#input-images").on("change", function () {
+                imagesPreview(this, "div.preview-images");
+            });
+            setTimeout(function() {
+                $('#alertMsg').fadeOut('fast');
+            }, 5000); // <-- time in milliseconds
+        });
+    </script>
+</body>
+
+</html>

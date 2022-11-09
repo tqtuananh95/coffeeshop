@@ -17,8 +17,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Set routes
 const home_page = require('./routers/home');
+const imageRouter = require('./routers/upload-image');
 app.use('/', home_page);
 app.use('/home', home_page);
+app.use('/upload', imageRouter);
 
 // Start the server
 const port = 3000;
