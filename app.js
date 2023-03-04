@@ -19,10 +19,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 const home_page = require('./routers/home');
 const imageRouter = require('./routers/upload-image');
 const designHomePageRouter = require('./routers/design-home-page');
+const menuPageRouter = require('./routers/menu-page');
 app.use('/', home_page);
 app.use('/home', home_page);
 app.use('/upload', imageRouter);
 app.use('/admin', designHomePageRouter);
+app.use('/menu', menuPageRouter);
 
 // Start the server
 const port = 3000;
