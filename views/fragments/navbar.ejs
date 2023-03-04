@@ -1,20 +1,25 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<!-- <nav class="navbar navbar-expand-lg navbar-dark navber-custom">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item">
+            <img class="img-logo" src="/images/logo.jpg" alt="Mr.K" width="75px" height="75px">
+          </li>
+      </ul>
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" href="/">Home</a>
+            <a class="nav-link active" href="/">QUÁN CÀ PHÊ</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/admin">Admin Page</a>
+            <a class="nav-link" href="/admin">THỰC ĐƠN</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/category">Category</a>
+            <a class="nav-link" href="/category">CỘNG ĐỒNG</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/product">Product</a>
+            <a class="nav-link" href="/product">VỀ CHÚNG TÔI</a>
           </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
@@ -25,4 +30,49 @@
         <li class="nav-item"><a href="/users/logout" class="text-white"><b>Logout</b></a></li>
       </ul>
     </div>
-  </nav>
+  </nav> -->
+  <header>
+    <nav class="navbar navbar-dark navbar-custom navbar-expand-md">
+      <!--  I removed unnecessary d-flex features.-->
+      <!-- Site Logo -->
+      <a class="navbar-brand col-2" href="#"><img class="img-logo" src="/images/logo.jpg" alt="Mr.K" width="75px" height="75px"></a>
+      <!-- Site Logo End -->
+    
+      <!-- Toggle button should be here -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      <!-- Toggle button end -->
+    
+      <div class="navbar-collapse text-right collapse hide w-100 " id="navbarSupportedContent">
+        <!-- Links -->
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item active">
+            <a class="nav-link active" href="#">QUÁN CÀ PHÊ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">THỰC ĐƠN</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">CỘNG ĐỒNG</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">VỀ CHÚNG TÔI</a>
+          </li>
+        </ul>
+        <!-- Links End -->
+    
+        <!-- There was an unnecessary column and row here.I removed it. Using rows in columns is not recommended.-->
+    
+        <!-- Icons -->
+        <div class="col-md-3 pr-0">
+          <span class="navbar-toggler-icon d-none"></span>
+          <div class="">
+            <!-- What is This ? -->
+          </div>
+        </div>
+        <!-- Icons end -->
+      </div>
+      <!-- the problem with mobile view is that the collapse class doesn't actually cover the icons class. Mobile view determines collapse class, remember! I took the icons class into the collapse class. -->
+    </nav>
+  </header>

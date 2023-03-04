@@ -1,0 +1,71 @@
+.text {
+    color: #21244D;
+    font-size: 20px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 50%;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.text:hover {
+    color: #b22830;
+}
+
+.form-option {
+    width: 200px;
+    border: 1px solid;
+    position: absolute;
+    right: 0;
+    margin-top: 25px;
+    background-color: #fff;
+    display: none;
+    z-index: 1;
+    padding-left: 10px;
+}
+.group-option .add-banner {
+    position: absolute;
+    right: 65px;
+}
+
+.group-option .delete-banner {
+    position: absolute;
+    right: 0;
+}
+
+.form-option .btn-add {
+    margin: 0px 0px 15px 45px;
+}
+
+.bannerHome i.fa-upload {
+    cursor: pointer;
+  }
+
+  i:hover {
+    opacity: 0.6;
+  }
+
+  
+/* Dành cho điện thoại */
+@media all and (min-width: 320px) {
+}
+
+@media only screen and (max-width: 320px) {
+}
+@media (min-width:200px) and (max-width:600px) {
+    .form-option {
+        height: 175px;
+        overflow: auto;
+    }
+}
+ 
+/* Dành cho máy tính bảng chiều dọc */
+@media all and (min-width: 600px) {}
+ 
+/* Dành cho máy tính bảng chiều ngang */
+@media all and (min-width: 1024px) {}
+ 
+/* Dành cho màn hình desktop */
+@media all and (min-width: 1280px) {
+}
