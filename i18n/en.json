@@ -1,0 +1,12 @@
+{
+    "title_home": "OUR CAFES",
+    "design_home": "DESIGN PAGE",
+    "coffee_shop": "CAFE SHOP",
+    "menu": "MENU",
+    "community": "COMMUNITY",
+    "about_us": "ABOUT US",
+    "You have %s message": {
+       "one": "You have %s message",
+       "other": "You have %s messages"
+    }
+ }

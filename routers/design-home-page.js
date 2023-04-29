@@ -6,7 +6,7 @@ const router = express.Router();
 // Get a Design
 router.get('/design-home-page', function(req, res) {
     res.render('./_layouts/admin/design-home-page', {
-        title: 'Design'
+        title: res.__('design_home')
     });
 });
 

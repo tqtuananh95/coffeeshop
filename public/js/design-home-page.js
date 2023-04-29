@@ -1,7 +1,9 @@
 $(function () {
     // Close the dropdown if the user clicks outside of it
     window.onclick = function (event) {
-        if (!event.target.matches('.add-banner') && !event.target.matches('.btn-close')) {
+        if (!event.target.matches('.add-banner') && !event.target.matches('.btn-close')
+            && !event.target.parentElement.matches('.form-group') && !event.target.parentElement.parentElement.matches('.form-group')
+            && !event.target.parentElement.matches('.group-option') && !event.target.parentElement.parentElement.matches('.group-option')) {
             var formOption = document.getElementsByClassName("form-option");
             for (var i = 0; i < formOption.length; i++) {
                 formOption[i].style.display = 'none';

@@ -6,7 +6,7 @@ const router = express.Router();
 // Get a Home
 router.get('/', function(req, res) {
     res.render('./_layouts/home', {
-        title: 'Home'
+        title: res.__('title_home')
     });
 });
 

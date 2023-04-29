@@ -1,0 +1,12 @@
+{
+    "title_home": "QUÁN CÀ PHÊ",
+    "design_home": "THIẾT KẾ TRANG CHỦ",
+    "coffee_shop": "QUÁN CÀ PHÊ",
+    "menu": "THỰC ĐƠN",
+    "community": "CỘNG ĐỒNG",
+    "about_us": "VỀ CHÚNG TÔI",
+    "You have %s message": {
+       "one": "You have %s message",
+       "other": "You have %s messages"
+    }
+}
